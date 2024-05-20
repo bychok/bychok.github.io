@@ -1,72 +1,23 @@
 import "./App.css";
-import React, { useReducer } from "react";
-// ------------------------------------------------{Step1: Import Hook}
-const reducer = (state, action) => {
-  // {Think of this as a playbook of all actions based on scenario}
-  switch (action.type) {
-    case "INCREMENT":
-      return {
-        count: state.count + 1,
-        toggleText: state.toggleText,
-      };
-    // Think of this as Each Play to be executed
-    case "DECREMENT":
-      return {
-        count: state.count - 1,
-        toggleText: state.toggleText,
-      };
-    case "toggleText":
-      return {
-        count: state.count,
-        toggleText: !state.toggleText,
-      };
-    default:
-      return state;
-  }
-};
-// Define reducer which allows you to make a switch statement for each case of how your state can be changed
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ParallaxProvider } from "react-scroll-parallax";
+import ApiSearchBar from "./pages/Api";
+import Homepage from "./pages/Homepage";
+import Navbar from "./components/Navbar";
 
 function App() {
-  // const [whateverState, setWhateverState] = useState()
-  const [state, dispatch] = useReducer(reducer, {
-    count: 0,
-    toggleText: true,
-  });
-  // ------------------------------------------{Step 2: Create state Variable, Create DISPATCH* ---> reducer which contains our current State}
-
   return (
-    <div className="App">
-      <>
-        <div>Current Count: {state.count}</div>
-        <div>
-          <button
-            onClick={() => {
-              dispatch({ type: "DECREMENT" });
-            }}
-          >
-            {" "}
-            -{" "}
-          </button>
-          <button
-            onClick={() => {
-              dispatch({ type: "INCREMENT" });
-            }}
-          >
-            {" "}
-            +{" "}
-          </button>
+    <Router>
+      <ParallaxProvider>
+        <div className="App">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/api" element={<ApiSearchBar />} />
+          </Routes>
         </div>
-        <hr />
-        <button
-          onClick={() => {
-            dispatch({ type: "toggleText" });
-          }}
-        >
-          Hide
-        </button>
-        <div>{state.toggleText && <p> This Text is Visible</p>}</div>
-      </>
-    </div>
+      </ParallaxProvider>
+    </Router>
   );
 }
 
