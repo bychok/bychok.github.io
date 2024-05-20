@@ -45,7 +45,7 @@ To run this project locally, follow these steps:
    npm start
    ```
 
-The application will be available at `http://localhost:3000`.
+The application will be available at `https://bychok.github.io/`.
 
 ## Usage
 
@@ -76,8 +76,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgements
 
-- [Chais Robinson](https://chaisrobinson.github.io/) for providing the framework and inspiration.
-
+- [Chais Robinson](https://chaisrobinson.github.io/) for providing the framework and the inspiration.
 - [Unsplash](https://unsplash.com/) for providing high-quality images.
 - [React](https://reactjs.org/) for the powerful UI library.
 - [React Scroll Parallax](https://react-scroll-parallax.damnthat.tv/) for the parallax scrolling effects.
