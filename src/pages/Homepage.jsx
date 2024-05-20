@@ -39,7 +39,7 @@ const Homepage = () => {
     <div className="container-body">
       <div className="introduction">
         <p>
-          Our cutting-edge platform allows you to search for any image quickly and easily. 
+          Our platform allows you to search for any image quickly and easily. 
           Whether you're looking for high-quality photos for your projects, inspiration 
           for your next creative endeavor, or just want to explore stunning visuals, 
           Super Search has you covered. With a sleek, user-friendly interface and powerful 
