@@ -10,7 +10,7 @@ const Homepage = () => {
     expanded: false,
     children: (
       <div className="headline-content">
-        <h1 className="text-6xl md:text-8xl text-white font-thin">WELCOME!</h1>
+        <h1 className="welcome-text">Super Search </h1>
       </div>
     ),
   };
@@ -37,6 +37,16 @@ const Homepage = () => {
 
   return (
     <div className="container-body">
+      <div className="introduction">
+        <p>
+          Our cutting-edge platform allows you to search for any image quickly and easily. 
+          Whether you're looking for high-quality photos for your projects, inspiration 
+          for your next creative endeavor, or just want to explore stunning visuals, 
+          Super Search has you covered. With a sleek, user-friendly interface and powerful 
+          search capabilities, finding the perfect image has never been easier. Start your 
+          search now and discover a world of incredible imagery at your fingertips!
+        </p>
+      </div>
       <ParallaxBanner
         layers={[gradientOverlay, foreground, headline]}
         className="full-height"

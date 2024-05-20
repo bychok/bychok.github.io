@@ -32,7 +32,6 @@ const Navbar = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/api">
                 Search
-                
               </Link>
             </li>
           </ul>

@@ -9,26 +9,40 @@ html, body, .container-body {
   flex-direction: column;
 }
 
+.introduction {
+  text-align: center;
+  padding: 2rem;
+  color: #e0e0e0;
+}
+
+.introduction p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
 .full-height {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .headline-content {
   position: absolute;
-  inset: 0;
+  top: 70%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .welcome-text {
-  font-size: 12rem; /* Adjust this size as needed */
+  font-size: 6rem;
   color: #fff;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .App {
@@ -48,7 +62,7 @@ html, body, .container-body {
 
 .navbar-brand a {
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   text-decoration: none;
 }
 
@@ -64,12 +78,14 @@ html, body, .container-body {
 }
 
 .nav-item {
-  margin-left: 1rem;
+  margin-left: 1.7rem;
+  margin-top: 1rem;
 }
 
 .nav-link {
   color: #fff;
   text-decoration: none;
+  font-size: 1.5em;
 }
 
 .nav-link:hover {
@@ -199,3 +215,4 @@ html, body, .container-body {
   justify-content: center;
   align-items: center;
 }
+
